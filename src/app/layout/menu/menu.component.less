@@ -1,4 +1,35 @@
-.example-container {
+mat-sidenav-container {
   height: 100%;
   background: #eee;
+
+  .side-nav {
+    background: #ffffff;
+    max-width: 296px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    &-title {
+      h2 {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 35px 133px 0 26px;
+      }
+    }
+    &-container {
+      width: 272px;
+      display: flex;
+      margin: 10px auto 0;
+      flex-direction: column;
+      h3 {
+        margin: 6px 0 0 14px;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #969696;
+      }
+      mat-list {
+      }
+    }
+  }
 }

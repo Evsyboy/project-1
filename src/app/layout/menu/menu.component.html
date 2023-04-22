@@ -1,4 +1,20 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+<mat-sidenav-container >
+  <mat-sidenav mode="side" opened class="side-nav">
+    <div class="side-nav-title">
+      <h2>Project1</h2>
+    </div>
+    <div class="side-nav-container">
+      <ng-container *ngFor="let navItem of navItems">
+      <h3>{{navItem.name}}</h3>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>This is the title</span>
+        </mat-list-item>
+        <mat-list-item>Also the title</mat-list-item>
+      </mat-list>
+      </ng-container>
+    </div>
+
+  </mat-sidenav>
   <mat-sidenav-content>Main content</mat-sidenav-content>
 </mat-sidenav-container>
