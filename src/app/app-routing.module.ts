@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuComponent } from './layout/menu/menu.component';
-import {LayoutComponent} from "./layout/layout.component";
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {
@@ -10,6 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        loadChildren: () =>
+          import('./hello/hello.module').then((m) => m.HelloModule),
+      },
+      {
+        path: 'general',
         loadChildren: () =>
           import('./general/general.module').then((m) => m.GeneralModule),
       },
@@ -20,7 +24,6 @@ const routes: Routes = [
       },
     ],
   },
-
   {
     path: '**',
     redirectTo: '',
