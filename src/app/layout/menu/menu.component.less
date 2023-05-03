@@ -22,13 +22,51 @@ mat-sidenav-container {
       margin: 10px auto 0;
       flex-direction: column;
       h3 {
-        margin: 6px 0 0 14px;
+        margin: 6px 0 12px 14px;
+        font-style: normal;
+        font-weight: 400;
         font-size: 12px;
         line-height: 16px;
         text-transform: uppercase;
         color: #969696;
       }
-      mat-list {
+      .link-container {
+        display: flex;
+        flex-direction: column;
+        mat-list-item {
+          height: 44px;
+          padding-left: 13px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          span {
+            color: #585757;
+            vertical-align: -10px;
+          }
+          .mat-icon {
+            margin-right: 12px;
+            display: inline-flex;
+            vertical-align: -15px;
+            padding-bottom: 1px;
+            color:#585757
+          }
+          &:hover,
+          :focus {
+            .mat-icon{
+              color: #0085FF;
+            }
+            background: linear-gradient(
+                0deg,
+                rgba(0, 133, 255, 0.1),
+                rgba(0, 133, 255, 0.1)
+              ),
+              #ffffff;
+            span {
+              font-weight: 500;
+            }
+          }
+        }
       }
     }
   }
