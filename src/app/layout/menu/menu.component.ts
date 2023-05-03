@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItems } from './model/navitems';
+import { MenuItems } from '../model/navitems';
 
 @Component({
   selector: 'app-menu',
@@ -14,12 +14,27 @@ export class MenuComponent {
         {
           name: 'Главная',
           link: 'general',
-          icon:"dashboard"
+          icon: 'dashboard',
         },
         {
           name: 'Новости',
           link: 'news',
-
+          icon: 'newspaper',
+        },
+      ],
+    },
+    {
+      name: 'Меню',
+      children: [
+        {
+          name: 'Главная',
+          link: 'general',
+          icon: 'dashboard',
+        },
+        {
+          name: 'Новости',
+          link: 'news',
+          icon: 'newspaper',
         },
       ],
     },

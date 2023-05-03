@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule, Routes } from '@angular/router';
 import { GeneralComponent } from './general.component';
 
-const routes: Routes = [
+const generalRoutes: Routes = [
   {
     path: '',
     component: GeneralComponent,
@@ -11,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(generalRoutes)],
   exports: [RouterModule],
 })
 export class GeneralRoutingModule {}

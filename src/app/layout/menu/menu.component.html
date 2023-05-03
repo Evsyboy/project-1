@@ -4,9 +4,9 @@
       <h2>Project1</h2>
     </div>
     <div class="side-nav-container">
-      <ng-container *ngFor="let navItem of navItems">
+      <div class="side-nav-item" *ngFor="let navItem of navItems">
         <h3>{{ navItem.name }}</h3>
-        <div class="link-container">
+        <div class="link-container" *ngIf="navItem.children">
           <mat-list-item
             *ngFor="let item of navItem.children"
             [routerLink]="item.link"
@@ -17,8 +17,8 @@
             </span>
           </mat-list-item>
         </div>
-      </ng-container>
+      </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content>Main content</mat-sidenav-content>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>

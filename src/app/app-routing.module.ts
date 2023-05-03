@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './layout/layout.component';
+import { MenuComponent } from './layout/menu/menu.component';
+import {LayoutComponent} from "./layout/layout.component";
 
 const routes: Routes = [
   {
@@ -8,11 +9,21 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'general',
+        path: '',
         loadChildren: () =>
           import('./general/general.module').then((m) => m.GeneralModule),
       },
+      {
+        path: 'news',
+        loadChildren: () =>
+          import('./news/news.module').then((m) => m.NewsModule),
+      },
     ],
+  },
+
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 
